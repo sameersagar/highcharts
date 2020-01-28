@@ -126,6 +126,7 @@ declare global {
     }
 }
 
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -157,7 +158,7 @@ var createElement = H.createElement,
 // onContainerMouseDown blocks internal popup events, due to e.preventDefault.
 // Related issue #4606
 
-wrap(H.Pointer.prototype, 'onContainerMouseDown', function (this: Highcharts.Pointer, proceed: Function, e): void {
+wrap(Pointer.prototype, 'onContainerMouseDown', function (this: Highcharts.Pointer, proceed: Function, e): void {
 
     var popupClass = e.target && e.target.className;
 

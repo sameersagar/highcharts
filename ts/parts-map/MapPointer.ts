@@ -10,8 +10,6 @@
 
 'use strict';
 
-import H from '../parts/Globals.js';
-
 /**
  * Internal types
  * @private
@@ -35,16 +33,13 @@ declare global {
     }
 }
 
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 const {
     extend,
     pick,
     wrap
 } = U;
-
-import '../parts/Pointer.js';
-
-var Pointer = H.Pointer;
 
 /* eslint-disable no-invalid-this */
 

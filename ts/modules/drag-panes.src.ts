@@ -71,6 +71,7 @@ declare global {
     }
 }
 
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -82,13 +83,10 @@ const {
 } = U;
 
 import '../parts/Axis.js';
-import '../parts/Pointer.js';
 
 var hasTouch = H.hasTouch,
     merge = H.merge,
     Axis = H.Axis,
-    Pointer = H.Pointer,
-
     // Default options for AxisResizer.
     resizerOptions: Highcharts.YAxisOptions = {
         /**

@@ -13,6 +13,7 @@
 import H from '../parts/Globals.js';
 import colorModule from '../parts/Color.js';
 var color = colorModule.color;
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 var addEvent = U.addEvent, defined = U.defined, discardElement = U.discardElement, erase = U.erase, extend = U.extend, extendClass = U.extendClass, isArray = U.isArray, isNumber = U.isNumber, isObject = U.isObject, offset = U.offset, pick = U.pick, pInt = U.pInt;
 import '../parts/SvgRenderer.js';
@@ -81,7 +82,7 @@ if (!svg) {
      * @param {boolean} [chartPosition=false]
      * @return {Highcharts.PointerEventObject}
      */
-    H.Pointer.prototype.normalize = function (e, chartPosition) {
+    Pointer.prototype.normalize = function (e, chartPosition) {
         e = e || win.event;
         if (!e.target) {
             e.target = e.srcElement;

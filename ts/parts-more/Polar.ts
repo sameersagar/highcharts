@@ -96,6 +96,7 @@ declare global {
     }
 }
 
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -105,15 +106,12 @@ const {
     wrap
 } = U;
 
-import '../parts/Pointer.js';
 import '../parts/Series.js';
-import '../parts/Pointer.js';
 
 // Extensions for polar charts. Additionally, much of the geometry required for
 // polar charts is gathered in RadialAxes.js.
 
-var Pointer = H.Pointer,
-    Series = H.Series,
+var Series = H.Series,
     seriesTypes = H.seriesTypes,
     seriesProto = Series.prototype as Highcharts.PolarSeries,
     pointerProto = Pointer.prototype,

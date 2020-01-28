@@ -247,6 +247,7 @@ declare global {
     }
 }
 
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -1653,7 +1654,7 @@ chartProto.callbacks.push(function (
 } as any);
 
 wrap(
-    H.Pointer.prototype,
+    Pointer.prototype,
     'onContainerMouseDown',
     function (this: Highcharts.Annotation, proceed: Function): void {
         if (!this.chart.hasDraggedAnnotation) {

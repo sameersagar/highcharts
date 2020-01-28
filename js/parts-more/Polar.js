@@ -9,14 +9,13 @@
  * */
 'use strict';
 import H from '../parts/Globals.js';
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 var addEvent = U.addEvent, defined = U.defined, pick = U.pick, splat = U.splat, wrap = U.wrap;
-import '../parts/Pointer.js';
 import '../parts/Series.js';
-import '../parts/Pointer.js';
 // Extensions for polar charts. Additionally, much of the geometry required for
 // polar charts is gathered in RadialAxes.js.
-var Pointer = H.Pointer, Series = H.Series, seriesTypes = H.seriesTypes, seriesProto = Series.prototype, pointerProto = Pointer.prototype, colProto;
+var Series = H.Series, seriesTypes = H.seriesTypes, seriesProto = Series.prototype, pointerProto = Pointer.prototype, colProto;
 /* eslint-disable no-invalid-this, valid-jsdoc */
 /**
  * Search a k-d tree by the point angle, used for shared tooltips in polar

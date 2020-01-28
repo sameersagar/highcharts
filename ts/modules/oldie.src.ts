@@ -319,6 +319,7 @@ import colorModule from '../parts/Color.js';
 const {
     color
 } = colorModule;
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -442,7 +443,7 @@ if (!svg) {
      * @param {boolean} [chartPosition=false]
      * @return {Highcharts.PointerEventObject}
      */
-    H.Pointer.prototype.normalize = function<
+    Pointer.prototype.normalize = function<
         T extends Highcharts.PointerEventObject
     > (
         e: (T|PointerEvent|TouchEvent),

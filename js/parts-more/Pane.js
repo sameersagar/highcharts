@@ -12,7 +12,9 @@ import H from '../parts/Globals.js';
 /**
  * @typedef {"arc"|"circle"|"solid"} Highcharts.PaneBackgroundShapeValue
  */
+''; // detach doclet above
 import '../mixins/centered-series.js';
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 var addEvent = U.addEvent, extend = U.extend, pick = U.pick, splat = U.splat;
 var CenteredSeriesMixin = H.CenteredSeriesMixin, merge = H.merge;
@@ -358,7 +360,7 @@ addEvent(H.Chart, 'afterIsInsidePlot', function (e) {
         e.isInsidePlot = chart.pane.some(function (pane) { return isInsidePane(e.x, e.y, pane.center); });
     }
 });
-addEvent(H.Pointer, 'beforeGetHoverData', function (eventArgs) {
+addEvent(Pointer, 'beforeGetHoverData', function (eventArgs) {
     var chart = this.chart;
     if (chart.polar) {
         // Find pane we are currently hovering over.
@@ -372,7 +374,7 @@ addEvent(H.Pointer, 'beforeGetHoverData', function (eventArgs) {
         };
     }
 });
-addEvent(H.Pointer, 'afterGetHoverData', function (eventArgs) {
+addEvent(Pointer, 'afterGetHoverData', function (eventArgs) {
     var chart = this.chart;
     if (eventArgs.hoverPoint &&
         eventArgs.hoverPoint.plotX &&

@@ -9,6 +9,7 @@
  * */
 'use strict';
 import H from '../parts/Globals.js';
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 var addEvent = U.addEvent, defined = U.defined, destroyObjectProperties = U.destroyObjectProperties, erase = U.erase, extend = U.extend, pick = U.pick, splat = U.splat, wrap = U.wrap;
 import '../parts/Chart.js';
@@ -1072,7 +1073,7 @@ chartProto.callbacks.push(function (chart) {
         chart.controlPointsGroup.destroy();
     });
 });
-wrap(H.Pointer.prototype, 'onContainerMouseDown', function (proceed) {
+wrap(Pointer.prototype, 'onContainerMouseDown', function (proceed) {
     if (!this.chart.hasDraggedAnnotation) {
         proceed.apply(this, Array.prototype.slice.call(arguments, 1));
     }

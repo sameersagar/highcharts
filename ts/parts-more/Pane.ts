@@ -81,8 +81,11 @@ declare global {
  * @typedef {"arc"|"circle"|"solid"} Highcharts.PaneBackgroundShapeValue
  */
 
+''; // detach doclet above
+
 import '../mixins/centered-series.js';
 
+import Pointer from '../parts/Pointer.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -557,7 +560,7 @@ addEvent(H.Chart, 'afterIsInsidePlot', function (
     }
 });
 
-addEvent(H.Pointer, 'beforeGetHoverData', function (
+addEvent(Pointer, 'beforeGetHoverData', function (
     this: Highcharts.Pointer,
     eventArgs: {
         chartX: number;
@@ -583,7 +586,7 @@ addEvent(H.Pointer, 'beforeGetHoverData', function (
     }
 });
 
-addEvent(H.Pointer, 'afterGetHoverData', function (
+addEvent(Pointer, 'afterGetHoverData', function (
     this: Highcharts.Pointer,
     eventArgs: Highcharts.PointerEventArgsObject
 ): void {
