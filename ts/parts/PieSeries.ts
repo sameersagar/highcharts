@@ -120,6 +120,7 @@ declare global {
     }
 }
 
+import Point from './Point.js';
 import U from './Utilities.js';
 const {
     addEvent,
@@ -136,7 +137,6 @@ import './ColumnSeries.js';
 import '../mixins/centered-series.js';
 import './Legend.js';
 import './Options.js';
-import './Point.js';
 import './Series.js';
 
 var CenteredSeriesMixin = H.CenteredSeriesMixin,
@@ -144,7 +144,6 @@ var CenteredSeriesMixin = H.CenteredSeriesMixin,
     LegendSymbolMixin = H.LegendSymbolMixin,
     merge = H.merge,
     noop = H.noop,
-    Point = H.Point,
     Series = H.Series,
     seriesType = H.seriesType,
     seriesTypes = H.seriesTypes;

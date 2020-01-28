@@ -80,14 +80,13 @@ declare global {
     }
 }
 
+import Point from '../parts/Point.js';
 import U from '../parts/Utilities.js';
 const {
     defined,
     extend,
     pick
 } = U;
-
-var Point = H.Point;
 
 H.NodesMixin = {
 

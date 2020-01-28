@@ -253,6 +253,7 @@ declare global {
  */
 
 import colorModule from '../parts/Color.js';
+import Point from '../parts/Point.js';
 import U from '../parts/Utilities.js';
 const {
     defined,
@@ -271,8 +272,7 @@ const {
 
 var find = H.find,
     merge = H.merge,
-    seriesType = H.seriesType,
-    Point = H.Point;
+    seriesType = H.seriesType;
 
 // eslint-disable-next-line valid-jsdoc
 /**

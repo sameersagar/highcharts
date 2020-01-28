@@ -48,6 +48,7 @@ declare global {
     }
 }
 
+import Point from '../../parts/Point.js';
 import U from '../../parts/Utilities.js';
 const {
     addEvent,
@@ -59,7 +60,6 @@ const {
 import '../../parts/Color.js';
 import '../../parts/Series.js';
 import '../../parts/Options.js';
-import '../../parts/Point.js';
 import '../../parts/Interaction.js';
 
 import butils from './boost-utils.js';
@@ -70,7 +70,6 @@ var boostEnabled = butils.boostEnabled,
     shouldForceChartSeriesBoosting = butils.shouldForceChartSeriesBoosting,
     Chart = H.Chart,
     Series = H.Series,
-    Point = H.Point,
     seriesTypes = H.seriesTypes,
     plotOptions: Highcharts.PlotOptions = H.getOptions().plotOptions as any;
 

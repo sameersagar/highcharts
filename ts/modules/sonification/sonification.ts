@@ -90,6 +90,7 @@ import Earcon from './Earcon.js';
 import pointSonifyFunctions from './pointSonify.js';
 import chartSonifyFunctions from './chartSonify.js';
 import utilities from './utilities.js';
+import Point from '../../parts/Point.js';
 import TimelineClasses from './Timeline.js';
 
 // Expose on the Highcharts object
@@ -163,8 +164,8 @@ H.sonification = {
 };
 
 // Chart specific
-H.Point.prototype.sonify = pointSonifyFunctions.pointSonify;
-H.Point.prototype.cancelSonify = pointSonifyFunctions.pointCancelSonify;
+Point.prototype.sonify = pointSonifyFunctions.pointSonify;
+Point.prototype.cancelSonify = pointSonifyFunctions.pointCancelSonify;
 H.Series.prototype.sonify = chartSonifyFunctions.seriesSonify;
 extend(H.Chart.prototype, {
     sonify: chartSonifyFunctions.chartSonify,

@@ -238,6 +238,7 @@ declare global {
 
 ''; // detach doclets from following code
 
+import Point from '../parts/Point.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -259,7 +260,6 @@ import '../parts/SvgRenderer.js';
 
 var Series = H.Series,
     Scatter = H.seriesTypes.scatter,
-    Point = H.Point,
     SvgRenderer = H.SVGRenderer,
     merge = H.merge,
     isFunction = H.isFunction,
@@ -2377,7 +2377,7 @@ addEvent(Series, 'afterRender', function (
     }
 });
 
-addEvent(H.Point, 'drillToCluster', function (
+addEvent(Point, 'drillToCluster', function (
     this: Highcharts.Point,
     event: Highcharts.PointClickEventObject
 ): void {

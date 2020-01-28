@@ -219,6 +219,9 @@ declare global {
  * @since 7.0.0
  */
 
+''; // detach doclet above
+
+import Point from '../../parts/Point.js';
 import U from '../../parts/Utilities.js';
 const {
     addEvent,
@@ -234,7 +237,6 @@ import './draggable-nodes.js';
 
 var seriesType = H.seriesType,
     seriesTypes = H.seriesTypes,
-    Point = H.Point,
     Series = H.Series,
     dragNodesMixin = H.dragNodesMixin;
 

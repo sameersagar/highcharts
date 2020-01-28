@@ -59,12 +59,11 @@ declare global {
     }
 }
 
+import Point from './Point.js';
 
 import './Utilities.js';
-import './Point.js';
 
-var Point = H.Point,
-    seriesType = H.seriesType,
+var seriesType = H.seriesType,
     seriesTypes = H.seriesTypes;
 
 /**

@@ -688,8 +688,7 @@ declare global {
  * @typedef {"hover"|"inactive"|"normal"|"select"} Highcharts.SeriesStateValue
  */
 
-import pointModule from './Point.js';
-const Point = pointModule.Point;
+import Point from './Point.js';
 import U from './Utilities.js';
 const {
     addEvent,

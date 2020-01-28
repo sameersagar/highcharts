@@ -243,6 +243,7 @@ import colorModule from '../parts/Color.js';
 const {
     color
 } = colorModule;
+import Point from '../parts/Point.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -258,7 +259,6 @@ const {
 
 import '../parts/Axis.js';
 import '../parts/Color.js';
-import '../parts/Point.js';
 import '../parts/Series.js';
 import '../modules/networkgraph/layouts.js';
 import '../modules/networkgraph/draggable-nodes.js';
@@ -266,7 +266,6 @@ import '../modules/networkgraph/draggable-nodes.js';
 
 var seriesType = H.seriesType,
     Series = H.Series,
-    Point = H.Point,
     Chart = H.Chart,
     Reingold = H.layouts['reingold-fruchterman'],
     NetworkPoint = H.seriesTypes.bubble.prototype.pointClass,

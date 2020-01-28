@@ -1013,7 +1013,7 @@ class Point {
                     if (pointArrayMap[j].indexOf('.') > 0) {
                         // Handle nested keys, e.g. ['color.pattern.image']
                         // Avoid function call unless necessary.
-                        H.Point.prototype.setNestedProperty(
+                        Point.prototype.setNestedProperty(
                             ret, (options as any)[i], pointArrayMap[j]
                         );
                     } else {
@@ -1179,10 +1179,6 @@ class Point {
     }
 }
 
-H.Point = Point as any;
+H.Point = Point as typeof Highcharts.Point;
 
-const pointModule = {
-    Point
-};
-
-export default pointModule;
+export default H.Point;

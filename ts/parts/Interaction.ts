@@ -149,6 +149,7 @@ declare global {
  *        Event that occured.
  */
 
+import Point from './Point.js';
 import U from './Utilities.js';
 const {
     addEvent,
@@ -164,7 +165,6 @@ const {
 import './Chart.js';
 import './Options.js';
 import './Legend.js';
-import './Point.js';
 import './Series.js';
 
 var Chart = H.Chart,
@@ -175,7 +175,6 @@ var Chart = H.Chart,
     hasTouch = H.hasTouch,
     Legend = H.Legend,
     merge = H.merge,
-    Point = H.Point,
     Series = H.Series,
     seriesTypes = H.seriesTypes,
     svg = H.svg,

@@ -15,6 +15,7 @@ import mixinTreeSeries from '../mixins/tree-series.js';
 import drawPoint from '../mixins/draw-point.js';
 import colorModule from '../parts/Color.js';
 var color = colorModule.color;
+import Point from '../parts/Point.js';
 import U from '../parts/Utilities.js';
 var addEvent = U.addEvent, correctFloat = U.correctFloat, defined = U.defined, extend = U.extend, fireEvent = U.fireEvent, isArray = U.isArray, isNumber = U.isNumber, isObject = U.isObject, isString = U.isString, objectEach = U.objectEach, pick = U.pick, stableSort = U.stableSort;
 import '../parts/Options.js';
@@ -1383,7 +1384,7 @@ seriesType('treemap', 'scatter'
     setVisible: seriesTypes.pie.prototype.pointClass.prototype.setVisible,
     /* eslint-disable no-invalid-this, valid-jsdoc */
     getClassName: function () {
-        var className = H.Point.prototype.getClassName.call(this), series = this.series, options = series.options;
+        var className = Point.prototype.getClassName.call(this), series = this.series, options = series.options;
         // Above the current level
         if (this.node.level <= series.nodeMap[series.rootNode].level) {
             className += ' highcharts-above-level';
@@ -1408,7 +1409,7 @@ seriesType('treemap', 'scatter'
         return this.id || isNumber(this.value);
     },
     setState: function (state) {
-        H.Point.prototype.setState.call(this, state);
+        Point.prototype.setState.call(this, state);
         // Graphic does not exist when point is not visible.
         if (this.graphic) {
             this.graphic.attr({

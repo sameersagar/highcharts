@@ -9,11 +9,11 @@
  * */
 'use strict';
 import H from '../parts/Globals.js';
+import Point from '../parts/Point.js';
 import '../parts/Utilities.js';
 import '../parts/Options.js';
-import '../parts/Point.js';
 import '../parts-more/BubbleSeries.js';
-var merge = H.merge, Point = H.Point, seriesType = H.seriesType, seriesTypes = H.seriesTypes;
+var merge = H.merge, seriesType = H.seriesType, seriesTypes = H.seriesTypes;
 // The mapbubble series type
 if (seriesTypes.bubble) {
     /**

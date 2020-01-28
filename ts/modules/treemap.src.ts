@@ -291,6 +291,7 @@ import colorModule from '../parts/Color.js';
 const {
     color
 } = colorModule;
+import Point from '../parts/Point.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -2166,7 +2167,7 @@ seriesType<Highcharts.TreemapSeries>(
         setVisible: seriesTypes.pie.prototype.pointClass.prototype.setVisible,
         /* eslint-disable no-invalid-this, valid-jsdoc */
         getClassName: function (this: Highcharts.TreemapPoint): string {
-            var className = H.Point.prototype.getClassName.call(this),
+            var className = Point.prototype.getClassName.call(this),
                 series = this.series,
                 options = series.options;
 
@@ -2200,7 +2201,7 @@ seriesType<Highcharts.TreemapSeries>(
             this: Highcharts.TreemapPoint,
             state: string
         ): void {
-            H.Point.prototype.setState.call(this, state);
+            Point.prototype.setState.call(this, state);
 
             // Graphic does not exist when point is not visible.
             if (this.graphic) {

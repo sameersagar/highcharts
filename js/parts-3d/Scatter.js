@@ -11,8 +11,9 @@
  * */
 'use strict';
 import H from '../parts/Globals.js';
+import Point from '../parts/Point.js';
 import '../parts/Utilities.js';
-var Point = H.Point, seriesType = H.seriesType, seriesTypes = H.seriesTypes;
+var seriesType = H.seriesType, seriesTypes = H.seriesTypes;
 /**
  * @private
  * @class

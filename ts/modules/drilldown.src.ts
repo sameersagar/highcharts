@@ -292,10 +292,13 @@ declare global {
  * @type {"drillup"}
  */
 
+''; // detach doclet above
+
 import colorModule from '../parts/Color.js';
 const {
     Color
 } = colorModule;
+import Point from '../parts/Point.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -1317,7 +1320,7 @@ if (PieSeries) {
     });
 }
 
-H.Point.prototype.doDrilldown = function (
+Point.prototype.doDrilldown = function (
     _holdRedraw: (boolean|undefined),
     category: (number|undefined),
     originalEvent: Event
@@ -1468,7 +1471,7 @@ Tick.prototype.drillable = function (): void {
 
 // On initialization of each point, identify its label and make it clickable.
 // Also, provide a list of points associated to that label.
-addEvent(H.Point, 'afterInit', function (): Highcharts.Point {
+addEvent(Point, 'afterInit', function (): Highcharts.Point {
     var point = this,
         series = point.series;
 
@@ -1559,7 +1562,7 @@ addEvent(H.Series, 'afterDrawTracker', function (): void {
 });
 
 
-addEvent(H.Point, 'afterSetState', function (): void {
+addEvent(Point, 'afterSetState', function (): void {
     var styledMode = this.series.chart.styledMode;
 
     if (this.drilldown && this.series.halo && this.state === 'hover') {

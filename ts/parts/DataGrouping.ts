@@ -147,6 +147,7 @@ declare global {
  * @type {number}
  */
 
+import Point from './Point.js';
 import U from './Utilities.js';
 const {
     addEvent,
@@ -167,7 +168,6 @@ var Axis = H.Axis,
     defaultPlotOptions = H.defaultPlotOptions,
     format = H.format,
     merge = H.merge,
-    Point = H.Point,
     Series = H.Series,
     Tooltip = H.Tooltip;
 

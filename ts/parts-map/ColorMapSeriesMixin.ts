@@ -57,6 +57,7 @@ declare global {
     }
 }
 
+import Point from '../parts/Point.js';
 import U from '../parts/Utilities.js';
 var defined = U.defined;
 
@@ -95,7 +96,7 @@ H.colorMapPointMixin = {
      * @return {void}
      */
     setState: function (this: Highcharts.ColorMapPoint, state?: string): void {
-        H.Point.prototype.setState.call(this, state);
+        Point.prototype.setState.call(this, state);
         if (this.graphic) {
             this.graphic.attr({
                 zIndex: state === 'hover' ? 1 : 0

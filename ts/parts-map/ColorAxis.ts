@@ -137,6 +137,7 @@ declare global {
 
 ''; // detach doclet above
 
+import Point from '../parts/Point.js';
 import U from '../parts/Utilities.js';
 const {
     addEvent,
@@ -156,7 +157,6 @@ import './ColorSeriesMixin.js';
 var Axis = H.Axis,
     Chart = H.Chart,
     Series = H.Series,
-    Point = H.Point,
     color = H.color,
     ColorAxis: Highcharts.ColorAxis,
     Legend = H.Legend,
