@@ -77,11 +77,15 @@ QUnit.test('dateFormats', function (assert) {
         37,
         'Week format produces correct output'
     );
-
+    assert.equal(
+        Highcharts.dateFormats.W(Date.UTC(2020, 0, 0)),
+        1,
+        'Week format gives correct first week of the year'
+    );
     assert.equal(
         Highcharts.dateFormats.E(Date.UTC(2016, 8, 15)), // September 15th 2016
         'T',
-        'Signle character week day format produces correct output'
+        'Single character week day format produces correct output'
     );
 });
 
